@@ -1,0 +1,481 @@
+* berlaku untuk semua (html tag bintang)
+di bntang kasih margin buat ngereset margin sama padding nya
+
+selector html menyangkut semua html
+
+scale itu untuk memperbesar
+ease in :
+
+css
+.social-media a {
+    display: inline-flex;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0; /*atas bawah kiri kanan*/
+    transition: 0.5s ease;
+}
+
+.social-media a:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    box-shadow: 0 0 1rem var(--main-color); /*untuk menghilangkan shadow yg vertikal & horizontal 1rem untuk ketebalannya*/
+}
+
+
+<a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+
+                project 
+<div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="assets/aromatica-urban.png" alt="project 1">
+                    <div class="portfolio-layer">
+                        <h4>Aromatica Urban</h4>
+                        <p>Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-box">
+                    <img src="assets/furni.png" alt="project 1">
+                    <div class="portfolio-layer">
+                        <h4>Furni</h4>
+                        <p>Furni is a store offering modern furniture and home decor with stylish designs.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="assets/grow.png" alt="project 1">
+                    <div class="portfolio-layer">
+                        <h4>Grow</h4>
+                        <p>Grow is a website that provides programming tips, tutorials, and resources for developers.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="assets/techgear.png" alt="project 1">
+                    <div class="portfolio-layer">
+                        <h4>Tech Gear</h4>
+                        <p>Tech Gear is a store that offers the latest gadgets and tech accessories</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="assets/aromatica-urban.png" alt="project 1">
+                    <div class="portfolio-layer">
+                        <h4>Aromatica Urban</h4>
+                        <p>Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="assets/aromatica-urban.png" alt="project 1">
+                    <div class="portfolio-layer">
+                        <h4>Aromatica Urban</h4>
+                        <p>Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+            .portfolio {
+    background-color: var(--secondary-color);
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid; /*kotak kotakin*/
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box img:hover {
+    transform: scale(1.1);
+    
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0; /*nempel kebawah*/
+    left: 0; /*nempel kekiri*/
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 2rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.22rem;
+    margin: .3 0 1rem; /*atas kanan kiri bawah*/
+}
+
+.portfolio-layer a {
+    display: inline-flex; /*biar lurus*/
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.portfolio-layer i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+
+
+<section class="work-section" id="portfolio">
+            <h2 class="section-title">Lastes <span>Project!</span></h2>
+
+            <div class="work-container container grid">
+                <article class="work-card">
+                    <a href="#" target="_blank" class="work-link">
+                        <h2 class="work-title">Aromatica Urban</h2>
+                        <p class="word-description">
+                            Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.
+                        </p>
+
+                        <img src="assets/aromatica-urban.png" alt="image" class="work-img">
+
+                        <i class='bx bx-chevrons-right'></i>
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <a href="#" target="_blank" class="work-link">
+                        <h2 class="work-title">Aromatica Urban</h2>
+                        <p class="word-description">
+                            Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.
+                        </p>
+
+                        <img src="assets/aromatica-urban.png" alt="image" class="work-img">
+
+                        <i class='bx bx-chevrons-right'></i>
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <a href="#" target="_blank" class="work-link">
+                        <h2 class="work-title">Aromatica Urban</h2>
+                        <p class="word-description">
+                            Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.
+                        </p>
+
+                        <img src="assets/aromatica-urban.png" alt="image" class="work-img">
+
+                        <i class='bx bx-chevrons-right'></i>
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <a href="#" target="_blank" class="work-link">
+                        <h2 class="work-title">Aromatica Urban</h2>
+                        <p class="word-description">
+                            Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.
+                        </p>
+
+                        <img src="assets/aromatica-urban.png" alt="image" class="work-img">
+
+                        <i class='bx bx-chevrons-right'></i>
+                    </a>
+                </article>
+
+                <article class="work-card">
+                    <a href="#" target="_blank" class="work-link">
+                        <h2 class="work-title">Aromatica Urban</h2>
+                        <p class="word-description">
+                            Aromatica Urban Restaurant is a cozy place serving fresh local and modern dishes.
+                        </p>
+
+                        <img src="assets/aromatica-urban.png" alt="image" class="work-img">
+
+                        <i class='bx bx-chevrons-right'></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        .work-section {
+    background-color: var(--secondary-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.work-card {
+    background-color: var(--bg-color);
+}
+
+.work-link {
+    display: grid;
+    position: relative;
+    /* background-color: var(--main-color); */
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    color: var(--text-color);
+    transition: transform .4s;
+}
+
+.word-card img {
+    width: 56px;
+    height: 72px;
+}
+
+
+//Kartuu
+<div class="container2">
+        <div class="blog-section">
+          <div class="title">
+            <h2>Lastes <span>Project!</span></h2>
+            <p>Here are some of the projects I've completed</p>
+          </div>
+          <div class="cards">
+            <!-- 1 -->
+            <div class="kartu">
+              <div class="imggg-section">
+                <img src="assets/aromatica-urban.png" alt="">
+              </div>
+              <div class="konten">
+                <h4>Aromatica Urban</h4>
+                <p>Aromatica Urban Restaurant offers a cozy atmosphere with fresh, local, and modern dishes. Located in the city center, it combines traditional flavors with contemporary techniques, providing a delightful dining experience for casual meals or special occasions.</p>
+              </div>
+            </div>
+            <!-- 2 -->
+            <div class="kartu">
+                <div class="imggg-section">
+                  <img src="assets/grow.png" alt="">
+                </div>
+                <div class="konten">
+                  <h4>Grow</h4>
+                  <p>Grow is a website offering programming tips, tutorials, and resources for developers. It covers various topics, from beginner guides to advanced techniques, helping users enhance their coding skills and stay updated with the latest industry trends.</p>
+                </div>
+              </div>
+            <!-- 3 -->
+            <div class="kartu">
+                <div class="imggg-section">
+                  <img src="assets/furni.png" alt="">
+                </div>
+                <div class="konten">
+                  <h4>Furni</h4>
+                  <p>Furni is a store offering modern furniture and home decor with stylish designs. It provides a wide range of high-quality products, from sleek sofas to unique accessories, helping customers create beautiful, functional spaces that truly reflect their personal style.</p>
+                </div>
+              </div>
+              <!-- 4 -->
+            <div class="kartu">
+                <div class="imggg-section">
+                  <img src="assets/tech-gear.png" alt="">
+                </div>
+                <div class="konten">
+                  <h4>Tech Gear</h4>
+                  <p>Tech Gear is a store offering the latest gadgets and tech accessories. It features a wide selection of cutting-edge products, from smartphones to smartwatches, providing customers with high-tech solutions that enhance their daily lives and digital experiences.</p>
+                </div>
+              </div>
+              <!-- 5 -->
+            <div class="kartu">
+                <div class="imggg-section">
+                  <img src="assets/portfolio.png" alt="">
+                </div>
+                <div class="konten">
+                  <h4>Portfolio</h4>
+                  <p>
+                    The portfolio website showcases projects and skills, highlighting design and functionality. It includes sections for personal information, project descriptions, and contact details, providing a professional online presence for potential clients and employers.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      css 
+
+      .container2 {
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+.blog-section {
+    width: 80%;
+    margin: 20px auto;
+
+}
+.blog-section .title {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+.blog-section .title {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+.blog-section .title h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-top: 5rem;
+
+}
+.blog-section .title p {
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-top: 20px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+}
+.cards .kartu {
+    width: 100%;
+    position: relative;
+} 
+.imggg-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.konten {
+    padding: 15px 20px;
+    min-height: 30px;
+}
+.konten h4 {
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.konten p {
+    color: var(--text-color);
+    font-size: 15px;
+}
+
+@media(max-width: 992px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+percentage 
+
+<div class="circular-progress">
+            <span class="progress-value">0%</span>
+
+          </div>
+          <span class="text">HTML & CSS</span>
+        </div>
+        <div class="container">
+          <div class="circular-progress">
+            <span class="progress-value">0%</span>
+
+          </div>
+          <span class="text">JavaScript</span>
+        </div>
+        <div class="container">
+          <div class="circular-progress">
+            <span class="progress-value">0%</span>
+
+          </div>
+          <span class="text">SCSS</span>
+        </div>
+        <div class="container">
+          <div class="circular-progress">
+            <span class="progress-value">0%</span>
+
+          </div>
+          <span class="text">Basic Figma</span>
+
+
+          css
+          .container {
+    /* background-color: var(- -bg-color); */
+    display: flex;
+    width: 420px;
+    padding: 50px 0;
+    border-radius: 8px;
+    background: #fff;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circular-progress {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#b8cbd5 3.6deg, #ededed 0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column (2fr);
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.progress-value {
+    position: relative;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.text {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
